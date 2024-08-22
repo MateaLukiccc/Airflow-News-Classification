@@ -1,0 +1,117 @@
+[2024-08-21T14:23:35.907+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-08-21T14:23:35.921+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_with_taskflow_v2.greet manual__2024-08-21T14:23:33.735712+00:00 [queued]>
+[2024-08-21T14:23:35.929+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_with_taskflow_v2.greet manual__2024-08-21T14:23:33.735712+00:00 [queued]>
+[2024-08-21T14:23:35.929+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 6
+[2024-08-21T14:23:35.939+0000] {taskinstance.py:2879} INFO - Executing <Task(_PythonDecoratedOperator): greet> on 2024-08-21 14:23:33.735712+00:00
+[2024-08-21T14:23:35.944+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=324) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-08-21T14:23:35.945+0000] {standard_task_runner.py:72} INFO - Started process 325 to run task
+[2024-08-21T14:23:35.944+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_with_taskflow_v2', 'greet', 'manual__2024-08-21T14:23:33.735712+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_taskflow.py', '--cfg-path', '/tmp/tmprgbjgnfl']
+[2024-08-21T14:23:35.946+0000] {standard_task_runner.py:105} INFO - Job 8: Subtask greet
+[2024-08-21T14:23:35.982+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_with_taskflow_v2.greet manual__2024-08-21T14:23:33.735712+00:00 [running]> on host d7b34105c471
+[2024-08-21T14:23:36.025+0000] {abstractoperator.py:778} ERROR - Exception rendering Jinja template for task 'greet', field 'op_args'. Template: (XComArg(<Task(_PythonDecoratedOperator): get_name>, 'first_name'), XComArg(<Task(_PythonDecoratedOperator): get_name>, 'last_name'), XComArg(<Task(_PythonDecoratedOperator): get_age>))
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/abstractoperator.py", line 770, in _do_render_template_fields
+    rendered_content = self.render_template(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/template/templater.py", line 179, in render_template
+    return tuple(self.render_template(element, context, jinja_env, oids) for element in value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/template/templater.py", line 179, in <genexpr>
+    return tuple(self.render_template(element, context, jinja_env, oids) for element in value)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/template/templater.py", line 175, in render_template
+    return value.resolve(context, include_xcom=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/xcom_arg.py", line 468, in resolve
+    raise XComNotFound(ti.dag_id, task_id, self.key)
+airflow.exceptions.XComNotFound: XComArg result from get_name at dag_with_taskflow_v2 with key="first_name" is not found!
+[2024-08-21T14:23:36.033+0000] {taskinstance.py:3301} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3105, in _execute_task_with_callbacks
+    task_orig = self.render_templates(context=context, jinja_env=jinja_env)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3524, in render_templates
+    original_task.render_template_fields(context, jinja_env)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 1419, in render_template_fields
+    self._do_render_template_fields(self, self.template_fields, context, jinja_env, set())
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/abstractoperator.py", line 770, in _do_render_template_fields
+    rendered_content = self.render_template(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/template/templater.py", line 179, in render_template
+    return tuple(self.render_template(element, context, jinja_env, oids) for element in value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/template/templater.py", line 179, in <genexpr>
+    return tuple(self.render_template(element, context, jinja_env, oids) for element in value)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/template/templater.py", line 175, in render_template
+    return value.resolve(context, include_xcom=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/xcom_arg.py", line 468, in resolve
+    raise XComNotFound(ti.dag_id, task_id, self.key)
+airflow.exceptions.XComNotFound: XComArg result from get_name at dag_with_taskflow_v2 with key="first_name" is not found!
+[2024-08-21T14:23:36.038+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=dag_with_taskflow_v2, task_id=greet, run_id=manual__2024-08-21T14:23:33.735712+00:00, execution_date=20240821T142333, start_date=20240821T142335, end_date=20240821T142336
+[2024-08-21T14:23:36.049+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-08-21T14:23:36.050+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 8 for task greet (XComArg result from get_name at dag_with_taskflow_v2 with key="first_name" is not found!; 325)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 2995, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3105, in _execute_task_with_callbacks
+    task_orig = self.render_templates(context=context, jinja_env=jinja_env)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3524, in render_templates
+    original_task.render_template_fields(context, jinja_env)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 1419, in render_template_fields
+    self._do_render_template_fields(self, self.template_fields, context, jinja_env, set())
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/abstractoperator.py", line 770, in _do_render_template_fields
+    rendered_content = self.render_template(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/template/templater.py", line 179, in render_template
+    return tuple(self.render_template(element, context, jinja_env, oids) for element in value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/template/templater.py", line 179, in <genexpr>
+    return tuple(self.render_template(element, context, jinja_env, oids) for element in value)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/template/templater.py", line 175, in render_template
+    return value.resolve(context, include_xcom=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/xcom_arg.py", line 468, in resolve
+    raise XComNotFound(ti.dag_id, task_id, self.key)
+airflow.exceptions.XComNotFound: XComArg result from get_name at dag_with_taskflow_v2 with key="first_name" is not found!
+[2024-08-21T14:23:36.090+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 1
+[2024-08-21T14:23:36.113+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-21T14:23:36.115+0000] {local_task_job_runner.py:240} INFO - ::endgroup::
