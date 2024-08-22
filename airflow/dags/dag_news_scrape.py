@@ -1,11 +1,13 @@
 from airflow import DAG
 from datetime import datetime, timedelta
 from airflow.operators.python import PythonOperator
+from airflow.providers.postgres.operators.postgres import PostgresOperator
 from airflow.decorators import dag, task
 
 from bs4 import BeautifulSoup
 import requests
 from transformers import pipeline
+import csv
 
 default_args = {
     'owner': 'matea',
@@ -52,14 +54,75 @@ def news_scraper_etl():
         return res_dict
     
     @task()
-    def classification(to_classify: dict):
-        return pipeline("sentiment-analysis", model="Lukiccc/my_awesome_model")(list(to_classify.values()))
+    def classification(to_classify: dict) -> dict:
+        res = dict()
+        for pred, text in zip(pipeline("sentiment-analysis", model="Lukiccc/my_awesome_model")(list(to_classify.values())), list(to_classify.values())):
+            res[text] = pred
+        return res
+    
+    @task()
+    def save_to_csv(to_save: dict):
+        with open(f"mycsvfile_{datetime.now()}.csv", "a", newline="") as f:
+            w = csv.DictWriter(f, to_save.keys())
+            w.writeheader()
+            w.writerow(to_save)
+    
+    @task()
+    def create_insert_string(to_insert: dict) -> str:
+        res: str = ''
+        starting_item = 0
+        today = datetime.today().date()
+        to_replace_first = "'"
+        to_replace_second = '"'
+        replacement = ""
 
+        for i, (key, value) in enumerate(to_insert.items()):
+            text = key.replace(to_replace_first, replacement)
+            text = text.replace(to_replace_second, replacement)
+            label = value['label']
+
+            if i == starting_item:
+                res += f"('{today}', '{i}', '{text}', '{label}')"
+            else:
+                res += f",('{today}', '{i}', '{text}', '{label}')"
+        
+        print(res)
+        return res
+    
+    create_database_task = PostgresOperator(
+        task_id='create_postgres_table',
+        postgres_conn_id='postgres_localhost',
+        sql='''
+            create table if not exists news(
+                dt date,
+                news_id character varying,
+                primary key (dt, news_id),
+                text character varying,
+                label character varying
+            )
+            '''
+        )
+    
     scraped_text = scrape()
     soup = get_soup(scraped_text)
     clean_text = clean_scraped(soup)
     res_dict = make_dict(clean_text)
     classified = classification(res_dict)
+    
+
+    insert_string = create_insert_string(classified)
+    insert_data = PostgresOperator(
+        task_id='insert_into_table',
+        postgres_conn_id='postgres_localhost',
+        sql=f'''
+            insert into news(dt, news_id, text, label) values {insert_string};
+            ''',
+        parameters ={"insert_string": insert_string}
+    )
+
+
+    create_database_task >> insert_data
+    save_to_csv(classified)
 
 news_scraper_etl()
 

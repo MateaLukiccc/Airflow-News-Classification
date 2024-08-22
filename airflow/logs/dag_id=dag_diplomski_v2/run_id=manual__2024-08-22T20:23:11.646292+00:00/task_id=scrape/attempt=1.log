@@ -1,0 +1,17 @@
+[2024-08-22T20:23:14.637+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-08-22T20:23:14.651+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_diplomski_v2.scrape manual__2024-08-22T20:23:11.646292+00:00 [queued]>
+[2024-08-22T20:23:14.658+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_diplomski_v2.scrape manual__2024-08-22T20:23:11.646292+00:00 [queued]>
+[2024-08-22T20:23:14.659+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 6
+[2024-08-22T20:23:14.669+0000] {taskinstance.py:2879} INFO - Executing <Task(_PythonDecoratedOperator): scrape> on 2024-08-22 20:23:11.646292+00:00
+[2024-08-22T20:23:14.677+0000] {standard_task_runner.py:72} INFO - Started process 19695 to run task
+[2024-08-22T20:23:14.680+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_diplomski_v2', 'scrape', 'manual__2024-08-22T20:23:11.646292+00:00', '--job-id', '290', '--raw', '--subdir', 'DAGS_FOLDER/dag_news_scrape.py', '--cfg-path', '/tmp/tmptadqzihu']
+[2024-08-22T20:23:14.682+0000] {standard_task_runner.py:105} INFO - Job 290: Subtask scrape
+[2024-08-22T20:23:14.719+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_diplomski_v2.scrape manual__2024-08-22T20:23:11.646292+00:00 [running]> on host 7585e18d2106
+[2024-08-22T20:23:14.790+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='matea' AIRFLOW_CTX_DAG_ID='dag_diplomski_v2' AIRFLOW_CTX_TASK_ID='scrape' AIRFLOW_CTX_EXECUTION_DATE='2024-08-22T20:23:11.646292+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-22T20:23:11.646292+00:00'
+[2024-08-22T20:23:14.791+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-08-22T20:23:15.003+0000] {python.py:240} INFO - Done. Returned value was: <Response [200]>
+[2024-08-22T20:23:15.026+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-08-22T20:23:15.027+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_diplomski_v2, task_id=scrape, run_id=manual__2024-08-22T20:23:11.646292+00:00, execution_date=20240822T202311, start_date=20240822T202314, end_date=20240822T202315
+[2024-08-22T20:23:15.065+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2024-08-22T20:23:15.090+0000] {taskinstance.py:3891} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-08-22T20:23:15.091+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

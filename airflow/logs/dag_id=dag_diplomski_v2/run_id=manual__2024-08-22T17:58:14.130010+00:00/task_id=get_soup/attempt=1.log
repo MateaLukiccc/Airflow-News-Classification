@@ -1,0 +1,422 @@
+[2024-08-22T17:58:22.979+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-08-22T17:58:22.998+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_diplomski_v2.get_soup manual__2024-08-22T17:58:14.130010+00:00 [queued]>
+[2024-08-22T17:58:23.008+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_diplomski_v2.get_soup manual__2024-08-22T17:58:14.130010+00:00 [queued]>
+[2024-08-22T17:58:23.009+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 6
+[2024-08-22T17:58:23.024+0000] {taskinstance.py:2879} INFO - Executing <Task(_PythonDecoratedOperator): get_soup> on 2024-08-22 17:58:14.130010+00:00
+[2024-08-22T17:58:23.033+0000] {standard_task_runner.py:72} INFO - Started process 13893 to run task
+[2024-08-22T17:58:23.037+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_diplomski_v2', 'get_soup', 'manual__2024-08-22T17:58:14.130010+00:00', '--job-id', '177', '--raw', '--subdir', 'DAGS_FOLDER/dag_news_scrape.py', '--cfg-path', '/tmp/tmp46k6vpjx']
+[2024-08-22T17:58:23.041+0000] {standard_task_runner.py:105} INFO - Job 177: Subtask get_soup
+[2024-08-22T17:58:23.094+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_diplomski_v2.get_soup manual__2024-08-22T17:58:14.130010+00:00 [running]> on host 7585e18d2106
+[2024-08-22T17:58:23.206+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='matea' AIRFLOW_CTX_DAG_ID='dag_diplomski_v2' AIRFLOW_CTX_TASK_ID='get_soup' AIRFLOW_CTX_EXECUTION_DATE='2024-08-22T17:58:14.130010+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-22T17:58:14.130010+00:00'
+[2024-08-22T17:58:23.208+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-08-22T17:58:23.220+0000] {python.py:240} INFO - Done. Returned value was: <?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/">
+<channel>
+<title>BBC News</title>
+<description>BBC News - News Front Page</description>
+<link>https://www.bbc.co.uk/news</link>
+<image>
+<url>https://news.bbcimg.co.uk/nol/shared/img/bbc_news_120x60.gif</url>
+<title>BBC News</title>
+<link>https://www.bbc.co.uk/news</link>
+</image>
+<generator>RSS for Node</generator>
+<lastBuildDate>Thu, 22 Aug 2024 17:58:11 GMT</lastBuildDate>
+<atom:link href="https://feeds.bbci.co.uk/news/rss.xml" rel="self" type="application/rss+xml"/>
+<copyright>Copyright: (C) British Broadcasting Corporation, see https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds for terms and conditions of reuse.</copyright>
+<language>en-gb</language>
+<ttl>15</ttl>
+<item>
+<title>Bayesian sinking: The key questions for investigators</title>
+<description>Experts tell the BBC that investigators will be asking if a freak weather event sank the Bayesian.</description>
+<link>https://www.bbc.com/news/articles/cvg343vjwklo</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/cvg343vjwklo#0</guid>
+<pubDate>Thu, 22 Aug 2024 16:22:43 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6aec/live/3ca33b80-6077-11ef-aea1-e764981585c4.jpg" width="240"/>
+</item>
+<item>
+<title>BBC sacks One Show presenter Jermaine Jenas after complaints</title>
+<description>The former footballer is taken off air at Match of the Day and the One Show.</description>
+<link>https://www.bbc.com/news/articles/cy76pdz5152o</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/cy76pdz5152o#0</guid>
+<pubDate>Thu, 22 Aug 2024 17:21:15 GMT</pubDate>
+<media:thumbnail height="134" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e33d/live/05406eb0-609f-11ef-ac2e-0dde5f4fd683.jpg" width="240"/>
+</item>
+<item>
+<title>Andrew Tate put under house arrest as new charges emerge</title>
+<description>The controversial influencer appeared in court in Romania as prosecutors investigate new allegations.</description>
+<link>https://www.bbc.com/news/articles/clyglgy8j3eo</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/clyglgy8j3eo#0</guid>
+<pubDate>Thu, 22 Aug 2024 16:59:55 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/516c/live/a68313e0-6090-11ef-8c32-f3c2bc7494c6.jpg" width="240"/>
+</item>
+<item>
+<title>GCSE gap between south and rest of England widens</title>
+<description>London was the highest-performing region, while the West Midlands was the lowest. </description>
+<link>https://www.bbc.com/news/articles/c8erl06w4dno</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/c8erl06w4dno#0</guid>
+<pubDate>Thu, 22 Aug 2024 15:58:28 GMT</pubDate>
+<media:thumbnail height="134" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3f2d/live/0b6e2130-60a2-11ef-ac2e-0dde5f4fd683.jpg" width="240"/>
+</item>
+<item>
+<title>Harris speech to provide finale to Democratic convention on day four</title>
+<description>The vice-president's' speech will share the story of her upbringing and contrast her vision for America to the one offered by Trump.</description>
+<link>https://www.bbc.com/news/articles/c80ey324neeo</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/c80ey324neeo#0</guid>
+<pubDate>Thu, 22 Aug 2024 14:37:06 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/47bc/live/9c4dff60-608c-11ef-8c32-f3c2bc7494c6.jpg" width="240"/>
+</item>
+<item>
+<title>Hunt for two dogs suspected of killing man</title>
+<description>Two dogs have been seized but two more American bulldog types are being sought by police.</description>
+<link>https://www.bbc.com/news/articles/c80egr50vmmo</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/c80egr50vmmo#0</guid>
+<pubDate>Thu, 22 Aug 2024 17:00:18 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f59a/live/8ede39a0-6085-11ef-a25b-91637a4fecda.png" width="240"/>
+</item>
+<item>
+<title>Storm Lilian: 80mph winds forecast for parts of the UK</title>
+<description>Strong winds and heavy rain set to hit the UK on Friday morning which could cause some disruption</description>
+<link>https://www.bbc.com/weather/articles/cje2yelp227o</link>
+<guid isPermaLink="false">https://www.bbc.com/weather/articles/cje2yelp227o#0</guid>
+<pubDate>Thu, 22 Aug 2024 15:38:25 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c925/live/232654d0-608b-11ef-8c32-f3c2bc7494c6.jpg" width="240"/>
+</item>
+<item>
+<title>First drug to slow Alzheimer’s too costly for NHS</title>
+<description>Health assessment body NICE says the benefits “are too small to justify the costs”.</description>
+<link>https://www.bbc.com/news/articles/c75nry66y52o</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/c75nry66y52o#0</guid>
+<pubDate>Thu, 22 Aug 2024 11:32:13 GMT</pubDate>
+<media:thumbnail height="134" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/41dd/live/b8a27050-5fd9-11ef-8b3a-855e585a4dd6.jpg" width="240"/>
+</item>
+<item>
+<title>Edinburgh backs introduction of new 'tourist tax' </title>
+<description>Visitors would be charged an additional levy on top of their hotel bill to stay in the city if plans are approved. </description>
+<link>https://www.bbc.com/news/articles/c7v5l29q2dvo</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/c7v5l29q2dvo#0</guid>
+<pubDate>Thu, 22 Aug 2024 15:44:28 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1d3b/live/5647e060-6061-11ef-b3ab-d92ed8dd7357.jpg" width="240"/>
+</item>
+<item>
+<title>Suspect in woman's stabbing detained under Mental Health Act</title>
+<description>Alberta Obinim, 43, died in the attack in Manchester on Sunday while two others were seriously injured.
+</description>
+<link>https://www.bbc.com/news/articles/cn02x8elrwqo</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/cn02x8elrwqo#0</guid>
+<pubDate>Thu, 22 Aug 2024 16:30:18 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3eb1/live/ee811f30-60a3-11ef-b76f-f1f593af629e.jpg" width="240"/>
+</item>
+<item>
+<title>World's second-largest diamond found in Botswana</title>
+<description>A 2,492-carat stone has been unearthed, in the biggest find since the Cullinan diamond in 1905. </description>
+<link>https://www.bbc.com/news/articles/c1w78rwlqvxo</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/c1w78rwlqvxo#0</guid>
+<pubDate>Thu, 22 Aug 2024 17:49:43 GMT</pubDate>
+<media:thumbnail height="134" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3c8b/live/1afcf830-606e-11ef-aea1-e764981585c4.jpg" width="240"/>
+</item>
+<item>
+<title>Four takeaways from 2024's GCSE results</title>
+<description>These students were in Year 7 during the first Covid lockdowns - and regional disparities have grown.</description>
+<link>https://www.bbc.com/news/articles/c33nvg1zj11o</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/c33nvg1zj11o#1</guid>
+<pubDate>Thu, 22 Aug 2024 16:32:02 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3efd/live/42203240-6093-11ef-ac2e-0dde5f4fd683.jpg" width="240"/>
+</item>
+<item>
+<title>As the GCSE pass rate falls, how to appeal or resit?</title>
+<description>The GCSE pass rate is down for the third year running across England, Wales and Northern Ireland.</description>
+<link>https://www.bbc.co.uk/news/education-53682466</link>
+<guid isPermaLink="false">https://www.bbc.co.uk/news/education-53682466#1</guid>
+<pubDate>Thu, 22 Aug 2024 09:56:33 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/14B3A/production/_129649748_gcseresults.jpg" width="240"/>
+</item>
+<item>
+<title>Team GB archer celebrates GCSEs - despite failing PE</title>
+<description>The Olympian says she passed all of her GCSEs apart from PE, "ironically".</description>
+<link>https://www.bbc.com/news/articles/clyn6n1e623o</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/clyn6n1e623o#1</guid>
+<pubDate>Thu, 22 Aug 2024 16:18:37 GMT</pubDate>
+<media:thumbnail height="134" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a68d/live/faabe2a0-607a-11ef-a5bf-b7797a792e63.jpg" width="240"/>
+</item>
+<item>
+<title>Siblings, 10 and 13, enjoy GCSE and A-level success</title>
+<description>Ariel, 10, and her brother Elias, 13, are awarded top grades.</description>
+<link>https://www.bbc.com/news/articles/cr5nqmlgvlzo</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/cr5nqmlgvlzo#1</guid>
+<pubDate>Thu, 22 Aug 2024 16:14:23 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ee95/live/c591ce50-6097-11ef-ac2e-0dde5f4fd683.jpg" width="240"/>
+</item>
+<item>
+<title>What is an apprenticeship and how do you get one?</title>
+<description>Going to school, college or university five days a week is not the only way to get a qualification. </description>
+<link>https://www.bbc.com/news/articles/c51xenx7pvqo</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/c51xenx7pvqo#1</guid>
+<pubDate>Thu, 22 Aug 2024 07:27:36 GMT</pubDate>
+<media:thumbnail height="134" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/760b/live/33e93600-177c-11ef-80aa-699d54c46324.jpg" width="240"/>
+</item>
+<item>
+<title>'Don't panic': What to do if you don't get the GCSE grades you want</title>
+<description>BBC journalist Terel Edmunds goes through the options available if your GCSEs didn't go as planned.</description>
+<link>https://www.bbc.com/news/videos/c39kdrw3m9no</link>
+<guid isPermaLink="false">https://www.bbc.com/news/videos/c39kdrw3m9no#1</guid>
+<pubDate>Thu, 22 Aug 2024 05:07:29 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e027/live/0db94320-6075-11ef-b43e-6916dcba5cbf.jpg" width="240"/>
+</item>
+<item>
+<title>Great-grandad, 73, passes his English GCSE exam</title>
+<description>Danny Davey, a retired roofer from Ipswich, says it is never too late to surprise yourself.</description>
+<link>https://www.bbc.com/news/articles/c935153pwpvo</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/c935153pwpvo#1</guid>
+<pubDate>Thu, 22 Aug 2024 13:24:39 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4f81/live/9f999b30-607c-11ef-b43e-6916dcba5cbf.jpg" width="240"/>
+</item>
+<item>
+<title>Ukrainian who spoke no English celebrates GCSEs </title>
+<description>Roman's mum says she is proud of his achievements after they were displaced by war two years ago.</description>
+<link>https://www.bbc.com/news/articles/c80ed02jy8eo</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/c80ed02jy8eo#1</guid>
+<pubDate>Thu, 22 Aug 2024 12:45:16 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/13df/live/e8a0c700-606c-11ef-aea1-e764981585c4.jpg" width="240"/>
+</item>
+<item>
+<title>'UK's greatest tech entrepreneur' - tributes paid to Mike Lynch</title>
+<description>A leading figure in the UK tech scene, he died shortly after winning a legal battle in the US.</description>
+<link>https://www.bbc.com/news/articles/cdxl5kpvrg9o</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/cdxl5kpvrg9o#2</guid>
+<pubDate>Thu, 22 Aug 2024 17:52:44 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/31d9/live/3f7c44f0-609f-11ef-b970-9f202720b57a.jpg" width="240"/>
+</item>
+<item>
+<title>How worried should we be about mpox?</title>
+<description>As a global emergency is declared over mpox, our health and science correspondent assesses the threat.</description>
+<link>https://www.bbc.com/news/articles/c4glqzerw3no</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/c4glqzerw3no#2</guid>
+<pubDate>Thu, 22 Aug 2024 01:23:31 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3db8/live/1b1c4660-6076-11ef-b43e-6916dcba5cbf.jpg" width="240"/>
+</item>
+<item>
+<title>How many people cross the Channel in small boats?</title>
+<description>Keir Starmer has said the UK will "smash the gangs" bringing people to the UK in small boats.</description>
+<link>https://www.bbc.co.uk/news/uk-53699511</link>
+<guid isPermaLink="false">https://www.bbc.co.uk/news/uk-53699511#2</guid>
+<pubDate>Thu, 22 Aug 2024 15:44:01 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/C36D/production/_127992005_migrants-index-gettyimages-1228293226.jpg" width="240"/>
+</item>
+<item>
+<title>‘I never worked for the Russians’ - punished by Kyiv for being a collaborator</title>
+<description>Almost 2,000 people have been convicted of collaborating with Russia under a new Ukrainian law.</description>
+<link>https://www.bbc.com/news/articles/c0473y0p0ego</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/c0473y0p0ego#2</guid>
+<pubDate>Thu, 22 Aug 2024 04:31:37 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1844/live/4c5d7830-6057-11ef-b43e-6916dcba5cbf.jpg" width="240"/>
+</item>
+<item>
+<title>‘That little devil is filming’: Director’s time with the Taliban</title>
+<description>Ibrahim Nash’at succeeded in getting permission to film with the Taliban for a year. 
+</description>
+<link>https://www.bbc.com/news/articles/c0l81rykd55o</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/c0l81rykd55o#2</guid>
+<pubDate>Thu, 22 Aug 2024 01:15:23 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9e3b/live/7953e2c0-5b1b-11ef-b2d2-cdb23d5d7c5b.jpg" width="240"/>
+</item>
+<item>
+<title>Rattled Trump lashes out as DNC attacks throw him off message</title>
+<description>The biggest concern for aides is keeping him focused on the issues and off controversial personal attacks, writes Katty Kay.</description>
+<link>https://www.bbc.com/news/articles/czrgp30j6z1o</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/czrgp30j6z1o#3</guid>
+<pubDate>Thu, 22 Aug 2024 17:36:06 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c498/live/1ac3f6f0-60a7-11ef-9d73-31ccba881c4e.jpg" width="240"/>
+</item>
+<item>
+<title>The 'blended' family behind Kamala Harris</title>
+<description>Take a look at the husband, step-children and others supporting Kamala Harris in her White House bid. </description>
+<link>https://www.bbc.com/news/articles/clylqv3g4rwo</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/clylqv3g4rwo#3</guid>
+<pubDate>Thu, 22 Aug 2024 16:55:30 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8757/live/1e9c4600-5b3f-11ef-8f60-79d5d8e2d012.jpg" width="240"/>
+</item>
+<item>
+<title>'Coach Walz' rallies Democrats with personal pitch to middle America</title>
+<description>The running mate of Kamala Harris told the Democratic convention that voters should back "the right team" and "turn the page on Donald Trump".</description>
+<link>https://www.bbc.com/news/articles/cd9dj4vdx2jo</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/cd9dj4vdx2jo#3</guid>
+<pubDate>Thu, 22 Aug 2024 05:02:08 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6668/live/3c1d8b60-6064-11ef-8c32-f3c2bc7494c6.jpg" width="240"/>
+</item>
+<item>
+<title>'That’s my dad': Gus Walz gives tearful reaction to father's speech</title>
+<description>Tim Walz said it was the honour of his life to be selected as Kamala Harris's running mate, as he addressed crowds at the DNC.</description>
+<link>https://www.bbc.com/news/videos/clyw7rwl7l2o</link>
+<guid isPermaLink="false">https://www.bbc.com/news/videos/clyw7rwl7l2o#3</guid>
+<pubDate>Thu, 22 Aug 2024 04:32:44 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0815/live/732987d0-604b-11ef-b970-9f202720b57a.jpg" width="240"/>
+</item>
+<item>
+<title>Democrats try to turn tables on one of their biggest weaknesses</title>
+<description>Democrats used the convention to try to flip the script on Republican criticism of their immigration policies.</description>
+<link>https://www.bbc.com/news/articles/cn4738kvyvmo</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/cn4738kvyvmo#3</guid>
+<pubDate>Thu, 22 Aug 2024 02:58:44 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/95ee/live/4c4634c0-6059-11ef-b970-9f202720b57a.jpg" width="240"/>
+</item>
+<item>
+<title>UK's oldest rollercoaster closed after 'crunch'</title>
+<description>Visitor Micah Fagan said: "I heard an enormous crunch of wood splitting...it didn’t sound right."</description>
+<link>https://www.bbc.com/news/articles/c2047711rxqo</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/c2047711rxqo#5</guid>
+<pubDate>Thu, 22 Aug 2024 14:15:24 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a55e/live/432bdd40-6090-11ef-8c32-f3c2bc7494c6.jpg" width="240"/>
+</item>
+<item>
+<title>Worker's engagement ring found in customer's shopping bag</title>
+<description>Morganne Moreno says she feels 'super lucky' after the customer found the ring amongst their shopping.</description>
+<link>https://www.bbc.com/news/articles/cwy5eyxn5w0o</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/cwy5eyxn5w0o#5</guid>
+<pubDate>Thu, 22 Aug 2024 11:59:30 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c2e8/live/1cc7e670-6069-11ef-89d9-cf0afdbdfcb1.jpg" width="240"/>
+</item>
+<item>
+<title>Drop in people coming to UK to work in NHS and social care</title>
+<description>The decline comes after the former Conservative government introduced restrictions on foreign workers and their families in an effort to slash overall immigration.</description>
+<link>https://www.bbc.com/news/articles/cn7l272pz0zo</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/cn7l272pz0zo#5</guid>
+<pubDate>Thu, 22 Aug 2024 11:47:42 GMT</pubDate>
+<media:thumbnail height="134" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/648b/live/0d121890-6073-11ef-aea1-e764981585c4.jpg" width="240"/>
+</item>
+<item>
+<title>Man, 81, charged after city centre protest</title>
+<description>Keith Edwards, from The Meadows, is due to appear at Nottingham Magistrates' Court on 6 September.</description>
+<link>https://www.bbc.com/news/articles/c5y84jz33pyo</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/c5y84jz33pyo#5</guid>
+<pubDate>Thu, 22 Aug 2024 14:34:25 GMT</pubDate>
+<media:thumbnail height="134" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/24bd/live/b3b292c0-608b-11ef-8c32-f3c2bc7494c6.jpg" width="240"/>
+</item>
+<item>
+<title>Starbucks boss under fire for 1,000-mile commute by corporate jet</title>
+<description>Job offer which allows new CEO to commute to and from work on corporate jet sparked criticism.</description>
+<link>https://www.bbc.com/news/articles/c5y3e0ljnllo</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/c5y3e0ljnllo#5</guid>
+<pubDate>Thu, 22 Aug 2024 16:56:04 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9743/live/49f502b0-6062-11ef-b3ab-d92ed8dd7357.jpg" width="240"/>
+</item>
+<item>
+<title>Dad hacks database to fake death and avoid child support pay</title>
+<description>The man, from Kentucky, has been jailed for what a judge in the US called his "cynical" actions.</description>
+<link>https://www.bbc.com/news/articles/cgrj9r5qpego</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/cgrj9r5qpego#5</guid>
+<pubDate>Thu, 22 Aug 2024 09:22:58 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/596a/live/eb9d4ce0-6066-11ef-89d9-cf0afdbdfcb1.png" width="240"/>
+</item>
+<item>
+<title>New Order cancel gig amid weather warning</title>
+<description>The organisers say customers will automatically receive a refund.</description>
+<link>https://www.bbc.com/news/articles/cn8l2lyerego</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/cn8l2lyerego#5</guid>
+<pubDate>Thu, 22 Aug 2024 13:58:39 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9831/live/4b9c2890-609a-11ef-ac2e-0dde5f4fd683.jpg" width="240"/>
+</item>
+<item>
+<title>Download now</title>
+<description>Top stories, breaking news, live reporting, and follow news topics that match your interests</description>
+<link>https://www.bbc.co.uk/news/10628994</link>
+<guid isPermaLink="false">https://www.bbc.co.uk/news/10628994#6</guid>
+<pubDate>Tue, 20 Aug 2024 11:35:33 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2cf6/live/d1e71250-9509-11ee-8df3-1d2983d8814f.png" width="240"/>
+</item>
+<item>
+<title>Americast on how Democrats will use Hollywood stars in election</title>
+<description>…and VP pick Tim Walz makes his pitch to America.</description>
+<link>https://www.bbc.co.uk/sounds/play/p0jkxf4j</link>
+<guid isPermaLink="false">https://www.bbc.co.uk/sounds/play/p0jkxf4j#7</guid>
+<pubDate>Thu, 22 Aug 2024 06:57:00 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/images/ic/240x135/p0jkxf53.jpg" width="240"/>
+</item>
+<item>
+<title>Is life getting easier for renters?</title>
+<description>Rents across the UK have soared in recent years. But new data shows that's changing.</description>
+<link>https://www.bbc.co.uk/sounds/play/p0jkkb4z</link>
+<guid isPermaLink="false">https://www.bbc.co.uk/sounds/play/p0jkkb4z#7</guid>
+<pubDate>Wed, 21 Aug 2024 03:58:00 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/images/ic/240x135/p0jkkb6n.jpg" width="240"/>
+</item>
+<item>
+<title>Brook and Smith edge England ahead of Sri Lanka</title>
+<description>England nudge ahead of a spirited Sri Lanka on a truncated second day of the first Test at Emirates Old Trafford.</description>
+<link>https://www.bbc.com/sport/cricket/articles/cj087rq7456o</link>
+<guid isPermaLink="false">https://www.bbc.com/sport/cricket/articles/cj087rq7456o#9</guid>
+<pubDate>Thu, 22 Aug 2024 17:32:19 GMT</pubDate>
+<media:thumbnail height="134" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b2e4/live/af644ba0-60a9-11ef-b970-9f202720b57a.jpg" width="240"/>
+</item>
+<item>
+<title>BBC sacks MOTD &amp; One Show's Jenas after complaints</title>
+<description>The former footballer is taken off air at Match of the Day and the One Show.</description>
+<link>https://www.bbc.com/news/articles/cy76pdz5152o</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/cy76pdz5152o#9</guid>
+<pubDate>Thu, 22 Aug 2024 17:21:15 GMT</pubDate>
+<media:thumbnail height="134" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e33d/live/05406eb0-609f-11ef-ac2e-0dde5f4fd683.jpg" width="240"/>
+</item>
+<item>
+<title>Raducanu faces Kenin in US Open first round</title>
+<description>Emma Raducanu will face fellow Grand Slam winner Sofia Kenin in the Briton's first US Open appearance for two years.</description>
+<link>https://www.bbc.com/sport/tennis/articles/cp8nwe650y0o</link>
+<guid isPermaLink="false">https://www.bbc.com/sport/tennis/articles/cp8nwe650y0o#9</guid>
+<pubDate>Thu, 22 Aug 2024 16:32:59 GMT</pubDate>
+<media:thumbnail height="134" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1977/live/8bdade80-60a2-11ef-b76f-f1f593af629e.jpg" width="240"/>
+</item>
+<item>
+<title>Newcastle defender Trippier keen to leave club</title>
+<description>England full-back Kieran Trippier wants to leave Newcastle United before the transfer window closes. </description>
+<link>https://www.bbc.com/sport/football/articles/c4gv5r7edjvo</link>
+<guid isPermaLink="false">https://www.bbc.com/sport/football/articles/c4gv5r7edjvo#9</guid>
+<pubDate>Thu, 22 Aug 2024 13:45:53 GMT</pubDate>
+<media:thumbnail height="134" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dfdd/live/cacf20a0-608a-11ef-a25b-91637a4fecda.jpg" width="240"/>
+</item>
+<item>
+<title>Brook falls to superb delivery on 56</title>
+<description>Prabath Jayasuriya picks up the "enormous" wicket of Harry Brook for 56 on day two of the first Test at Old Trafford. </description>
+<link>https://www.bbc.com/sport/cricket/videos/c990gxyvevmo</link>
+<guid isPermaLink="false">https://www.bbc.com/sport/cricket/videos/c990gxyvevmo#9</guid>
+<pubDate>Thu, 22 Aug 2024 16:05:54 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/95ff/live/0aa33770-609f-11ef-b43e-6916dcba5cbf.jpg" width="240"/>
+</item>
+<item>
+<title>Man, 81, charged after city centre protest</title>
+<description>Keith Edwards, from The Meadows, is due to appear at Nottingham Magistrates' Court on 6 September.</description>
+<link>https://www.bbc.com/news/articles/c5y84jz33pyo</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/c5y84jz33pyo#10</guid>
+<pubDate>Thu, 22 Aug 2024 14:34:25 GMT</pubDate>
+<media:thumbnail height="134" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/24bd/live/b3b292c0-608b-11ef-8c32-f3c2bc7494c6.jpg" width="240"/>
+</item>
+<item>
+<title>Martin McCauley in court over 1982 Lurgan bombing</title>
+<description>Three RUC officers in an unmarked police car were killed in the blast at Kinnego Embankment.</description>
+<link>https://www.bbc.com/news/articles/c624npqz0pvo</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/c624npqz0pvo#10</guid>
+<pubDate>Thu, 22 Aug 2024 16:38:33 GMT</pubDate>
+<media:thumbnail height="134" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/44c3/live/a4c0aac0-608d-11ef-a25b-91637a4fecda.jpg" width="240"/>
+</item>
+<item>
+<title>Edinburgh backs introduction of new 'tourist tax' </title>
+<description>Visitors would be charged an additional levy on top of their hotel bill to stay in the city if plans are approved. </description>
+<link>https://www.bbc.com/news/articles/c7v5l29q2dvo</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/c7v5l29q2dvo#10</guid>
+<pubDate>Thu, 22 Aug 2024 15:44:28 GMT</pubDate>
+<media:thumbnail height="135" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1d3b/live/5647e060-6061-11ef-b3ab-d92ed8dd7357.jpg" width="240"/>
+</item>
+<item>
+<title>Woman accused of killing baby after crash into pram</title>
+<description>Mabli Cariad Hall died in hospital four days after a car hit her pram outside Withybush Hospital.</description>
+<link>https://www.bbc.com/news/articles/cm2nvm5jlleo</link>
+<guid isPermaLink="false">https://www.bbc.com/news/articles/cm2nvm5jlleo#10</guid>
+<pubDate>Thu, 22 Aug 2024 09:53:42 GMT</pubDate>
+<media:thumbnail height="134" url="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5cc9/live/8ec02c80-6094-11ef-a25b-91637a4fecda.jpg" width="240"/>
+</item>
+</channel>
+</rss>
+[2024-08-22T17:58:23.256+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-08-22T17:58:23.257+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_diplomski_v2, task_id=get_soup, run_id=manual__2024-08-22T17:58:14.130010+00:00, execution_date=20240822T175814, start_date=20240822T175822, end_date=20240822T175823
+[2024-08-22T17:58:23.298+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2024-08-22T17:58:23.313+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py:1378 AirflowProviderDeprecationWarning: Call to deprecated class PostgresOperator. (Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`.Also, you can provide `hook_params={'schema': <database>}`.)
+[2024-08-22T17:58:23.336+0000] {taskinstance.py:3891} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-08-22T17:58:23.338+0000] {local_task_job_runner.py:240} INFO - ::endgroup::
