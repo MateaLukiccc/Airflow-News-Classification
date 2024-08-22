@@ -14,10 +14,11 @@ class FetchData:
         html_data = requests.get(self.web_link).content
         return html_data
     
-    def run(self):
+    def run(self) -> str:
         data = self.fetch()
-        with open(f'{self.file_name}.html', 'wb') as file:
-            file.write(data)
+        # with open(f'{self.file_name}.html', 'wb') as file:
+        #     file.write(data)
+        return data.decode('utf-8')
 
 
 if __name__ == '__main__':
