@@ -9143,3 +9143,59 @@ SyntaxError: f-string: valid expression required before '}'
 [2024-08-22T20:42:49.254+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:42:49.254+0000] {dag.py:3211} INFO - Sync 1 DAGs
 [2024-08-22T20:42:49.268+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:42:49.268+0000] {dag.py:4138} INFO - Setting next_dagrun for dag_diplomski_v2 to 2024-08-22 00:00:00+00:00, run_after=2024-08-23 00:00:00+00:00
 [2024-08-22T20:42:49.280+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_news_scrape.py took 3.320 seconds
+[2024-08-22T20:43:19.582+0000] {processor.py:186} INFO - Started process (PID=22057) to work on /opt/airflow/dags/dag_news_scrape.py
+[2024-08-22T20:43:19.584+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_news_scrape.py for tasks to queue
+[2024-08-22T20:43:19.585+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:43:19.585+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/dag_news_scrape.py
+[2024-08-22T20:43:21.884+0000] {processor.py:925} INFO - DAG(s) 'dag_diplomski_v2' retrieved from /opt/airflow/dags/dag_news_scrape.py
+[2024-08-22T20:43:21.901+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:43:21.901+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-08-22T20:43:21.914+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:43:21.914+0000] {dag.py:4138} INFO - Setting next_dagrun for dag_diplomski_v2 to 2024-08-22 00:00:00+00:00, run_after=2024-08-23 00:00:00+00:00
+[2024-08-22T20:43:21.932+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_news_scrape.py took 2.363 seconds
+[2024-08-22T20:43:52.233+0000] {processor.py:186} INFO - Started process (PID=22087) to work on /opt/airflow/dags/dag_news_scrape.py
+[2024-08-22T20:43:52.234+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_news_scrape.py for tasks to queue
+[2024-08-22T20:43:52.235+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:43:52.235+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/dag_news_scrape.py
+[2024-08-22T20:43:54.507+0000] {processor.py:925} INFO - DAG(s) 'dag_diplomski_v2' retrieved from /opt/airflow/dags/dag_news_scrape.py
+[2024-08-22T20:43:54.525+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:43:54.525+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-08-22T20:43:54.539+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:43:54.539+0000] {dag.py:4138} INFO - Setting next_dagrun for dag_diplomski_v2 to 2024-08-22 00:00:00+00:00, run_after=2024-08-23 00:00:00+00:00
+[2024-08-22T20:43:54.555+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_news_scrape.py took 2.328 seconds
+[2024-08-22T20:44:24.824+0000] {processor.py:186} INFO - Started process (PID=22117) to work on /opt/airflow/dags/dag_news_scrape.py
+[2024-08-22T20:44:24.825+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_news_scrape.py for tasks to queue
+[2024-08-22T20:44:24.826+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:44:24.826+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/dag_news_scrape.py
+[2024-08-22T20:44:26.912+0000] {processor.py:925} INFO - DAG(s) 'dag_diplomski_v2' retrieved from /opt/airflow/dags/dag_news_scrape.py
+[2024-08-22T20:44:26.930+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:44:26.930+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-08-22T20:44:26.943+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:44:26.943+0000] {dag.py:4138} INFO - Setting next_dagrun for dag_diplomski_v2 to 2024-08-22 00:00:00+00:00, run_after=2024-08-23 00:00:00+00:00
+[2024-08-22T20:44:26.959+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_news_scrape.py took 2.140 seconds
+[2024-08-22T20:44:57.078+0000] {processor.py:186} INFO - Started process (PID=22158) to work on /opt/airflow/dags/dag_news_scrape.py
+[2024-08-22T20:44:57.079+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_news_scrape.py for tasks to queue
+[2024-08-22T20:44:57.080+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:44:57.080+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/dag_news_scrape.py
+[2024-08-22T20:45:00.041+0000] {processor.py:925} INFO - DAG(s) 'dag_diplomski_v2' retrieved from /opt/airflow/dags/dag_news_scrape.py
+[2024-08-22T20:45:00.062+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:45:00.061+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-08-22T20:45:00.083+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:45:00.082+0000] {dag.py:4138} INFO - Setting next_dagrun for dag_diplomski_v2 to 2024-08-22 00:00:00+00:00, run_after=2024-08-23 00:00:00+00:00
+[2024-08-22T20:45:00.097+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_news_scrape.py took 3.025 seconds
+[2024-08-22T20:45:30.297+0000] {processor.py:186} INFO - Started process (PID=22177) to work on /opt/airflow/dags/dag_news_scrape.py
+[2024-08-22T20:45:30.298+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_news_scrape.py for tasks to queue
+[2024-08-22T20:45:30.299+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:45:30.299+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/dag_news_scrape.py
+[2024-08-22T20:45:32.522+0000] {processor.py:925} INFO - DAG(s) 'dag_diplomski_v2' retrieved from /opt/airflow/dags/dag_news_scrape.py
+[2024-08-22T20:45:32.540+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:45:32.540+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-08-22T20:45:32.553+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:45:32.553+0000] {dag.py:4138} INFO - Setting next_dagrun for dag_diplomski_v2 to 2024-08-22 00:00:00+00:00, run_after=2024-08-23 00:00:00+00:00
+[2024-08-22T20:45:32.572+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_news_scrape.py took 2.281 seconds
+[2024-08-22T20:46:02.868+0000] {processor.py:186} INFO - Started process (PID=22207) to work on /opt/airflow/dags/dag_news_scrape.py
+[2024-08-22T20:46:02.869+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_news_scrape.py for tasks to queue
+[2024-08-22T20:46:02.870+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:46:02.869+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/dag_news_scrape.py
+[2024-08-22T20:46:05.112+0000] {processor.py:925} INFO - DAG(s) 'dag_diplomski_v2' retrieved from /opt/airflow/dags/dag_news_scrape.py
+[2024-08-22T20:46:05.131+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:46:05.130+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-08-22T20:46:05.147+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:46:05.147+0000] {dag.py:4138} INFO - Setting next_dagrun for dag_diplomski_v2 to 2024-08-22 00:00:00+00:00, run_after=2024-08-23 00:00:00+00:00
+[2024-08-22T20:46:05.157+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_news_scrape.py took 2.298 seconds
+[2024-08-22T20:46:34.415+0000] {processor.py:186} INFO - Started process (PID=22226) to work on /opt/airflow/dags/dag_news_scrape.py
+[2024-08-22T20:46:34.415+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_news_scrape.py for tasks to queue
+[2024-08-22T20:46:34.417+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:46:34.416+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/dag_news_scrape.py
+[2024-08-22T20:46:36.692+0000] {processor.py:925} INFO - DAG(s) 'dag_diplomski_v2' retrieved from /opt/airflow/dags/dag_news_scrape.py
+[2024-08-22T20:46:36.712+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:46:36.711+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-08-22T20:46:36.726+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:46:36.725+0000] {dag.py:4138} INFO - Setting next_dagrun for dag_diplomski_v2 to 2024-08-22 00:00:00+00:00, run_after=2024-08-23 00:00:00+00:00
+[2024-08-22T20:46:36.743+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_news_scrape.py took 2.333 seconds
+[2024-08-22T20:46:53.546+0000] {processor.py:186} INFO - Started process (PID=22256) to work on /opt/airflow/dags/dag_news_scrape.py
+[2024-08-22T20:46:53.547+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_news_scrape.py for tasks to queue
+[2024-08-22T20:46:53.548+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:46:53.548+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/dag_news_scrape.py
+[2024-08-22T20:46:56.059+0000] {processor.py:925} INFO - DAG(s) 'dag_diplomski_v2' retrieved from /opt/airflow/dags/dag_news_scrape.py
+[2024-08-22T20:46:56.080+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:46:56.080+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-08-22T20:46:56.095+0000] {logging_mixin.py:190} INFO - [2024-08-22T20:46:56.095+0000] {dag.py:4138} INFO - Setting next_dagrun for dag_diplomski_v2 to 2024-08-22 00:00:00+00:00, run_after=2024-08-23 00:00:00+00:00
+[2024-08-22T20:46:56.114+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_news_scrape.py took 2.574 seconds
