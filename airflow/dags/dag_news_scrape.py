@@ -5,6 +5,7 @@ from airflow.decorators import dag, task
 
 from bs4 import BeautifulSoup
 import requests
+from transformers import pipeline
 
 default_args = {
     'owner': 'matea',
@@ -50,10 +51,15 @@ def news_scraper_etl():
         print(res_dict)
         return res_dict
     
+    @task()
+    def classification(to_classify: dict):
+        return pipeline("sentiment-analysis", model="Lukiccc/my_awesome_model")(list(to_classify.values()))
+
     scraped_text = scrape()
     soup = get_soup(scraped_text)
     clean_text = clean_scraped(soup)
     res_dict = make_dict(clean_text)
+    classified = classification(res_dict)
 
 news_scraper_etl()
 
