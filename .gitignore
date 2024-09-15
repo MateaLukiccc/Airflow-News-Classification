@@ -1,2 +1,4 @@
-*.logs
+*/logs
 temp/
+*.env
+*__pycache__
